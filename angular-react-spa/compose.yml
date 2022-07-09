@@ -1,0 +1,23 @@
+version: "2.1"
+services:
+  root:
+    image: root-image
+    build:
+      context: ./root
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+  react:
+    image: react-image
+    build:
+      context: ./react
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+  angular:
+    image: angular-image
+    build:
+      context: ./angular
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"

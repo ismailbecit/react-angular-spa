@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script src="https://unpkg.com/zone.js@0.11.1/bundles/zone.umd.js"></script>
+
+<body>
+
+  <single-spa-router>
+    <main>
+      <route default>
+        <ul>
+          <li><a href="/react">React App</a></li>
+          <li><a href="/angular">Angular App</a></li>
+        </ul>
+      </route>
+      <route path="react">
+        <application name="@react/react"></application>
+      </route>
+      <route path="/angular">
+        <application name="@angular/angular"></application>
+      </route>
+    </main>
+  </single-spa-router>
+</body>
+
+</html>
